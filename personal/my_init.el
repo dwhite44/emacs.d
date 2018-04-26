@@ -1,4 +1,4 @@
-;; Enable / Configure parinfer 
+;; Enable / Configure parinfer
 (require 'use-package)
 (use-package parinfer
   :ensure t
@@ -25,6 +25,7 @@
     (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
     (add-hook 'common-lisp-mode-hook #'parinfer-mode)
     (add-hook 'scheme-mode-hook #'parinfer-mode)
+    (add-hook 'cider-repl-mode-hook #'parinfer-mode)
     (add-hook 'lisp-mode-hook #'parinfer-mode)))
 
 (print "Set vim shift action to only use 2 spaces when in clojure mode")
@@ -45,10 +46,16 @@
 (global-set-key [3 16] (quote projectile-find-file-in-known-projects))
 
 (print "set default font")
-(custom-set-faces                                                                                    
+(custom-set-faces
  '(default ((t (:height 150 :family "Menlo")))))
 
 (print "Disable autosave and set backup files to single directory")
 (setq auto-save-default nil)
 (setq prelude-auto-save nil)
 (setq backup-directory-alist '(("" . "~/.emacs.d/emacs-backup")))
+
+(print "Set evil mode to insert for some windows")
+(defun evil-set-insert ()
+  (setq evil-default-state 'insert))
+(add-hook 'cider-repl-mode-hook #'evil-set-insert)
+(add-hook 'cider-error-mode-hook #'evil-set-insert)
