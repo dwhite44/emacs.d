@@ -43,7 +43,7 @@
 (add-hook 'parinfer-mode-disable-hook #'parinfer-enable-smartparens)
 
 (print "set global key bindings")
-(global-set-key [3 16] (quote projectile-find-file-in-known-projects))
+(global-set-key [134217840] (quote projectile-find-file-in-known-projects))
 
 (print "set default font")
 (custom-set-faces
