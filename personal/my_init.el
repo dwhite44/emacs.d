@@ -40,3 +40,10 @@
     (smartparens-global-mode 1))
 (add-hook 'parinfer-mode-enable-hook #'parinfer-disable-smartparens)
 (add-hook 'parinfer-mode-disable-hook #'parinfer-enable-smartparens)
+
+(print "set global key bindings")
+(global-set-key [3 16] (quote projectile-find-file-in-known-projects))
+
+(print "set default font")
+(custom-set-faces                                                                                    
+ '(default ((t (:height 150 :family "Menlo")))))
