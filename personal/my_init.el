@@ -47,3 +47,8 @@
 (print "set default font")
 (custom-set-faces                                                                                    
  '(default ((t (:height 150 :family "Menlo")))))
+
+(print "Disable autosave and set backup files to single directory")
+(setq auto-save-default nil)
+(setq prelude-auto-save nil)
+(setq backup-directory-alist '(("" . "~/.emacs.d/emacs-backup")))
