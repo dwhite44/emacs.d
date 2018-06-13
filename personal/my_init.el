@@ -59,3 +59,6 @@
   (setq evil-default-state 'insert))
 (add-hook 'cider-repl-mode-hook #'evil-set-insert)
 (add-hook 'cider-error-mode-hook #'evil-set-insert)
+
+(print "Set to always include line numbers on left-side of window")
+(global-linum-mode t)
