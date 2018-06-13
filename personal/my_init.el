@@ -10,7 +10,7 @@
         ("C-," . parinfer-toggle-mode)
         :map parinfer-region-mode-map
         ("C-i" . indent-for-tab-command)
-        ("<tab>" . parinfer-smart-tab:dwim-right) )
+        ("<tab>" . parinfer-smart-tab:dwim-right))
   :init
   (progn
      (setq parinfer-extensions
@@ -25,7 +25,7 @@
     (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
     (add-hook 'common-lisp-mode-hook #'parinfer-mode)
     (add-hook 'scheme-mode-hook #'parinfer-mode)
-    (add-hook 'cider-repl-mode-hook #'parinfer-mode)
+    ;;(add-hook 'cider-repl-mode-hook #'parinfer-mode)
     (add-hook 'lisp-mode-hook #'parinfer-mode)))
 
 (print "Set vim shift action to only use 2 spaces when in clojure mode")
