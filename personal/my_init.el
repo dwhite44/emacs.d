@@ -42,6 +42,10 @@
 (add-hook 'parinfer-mode-enable-hook #'parinfer-disable-smartparens)
 (add-hook 'parinfer-mode-disable-hook #'parinfer-enable-smartparens)
 
+(print "Set smartparens strict mode off globally")
+(add-hook 'cider-repl-mode-hook #'turn-off-smartparens-strict-mode)
+;;(setq smartparens-global-strict-mode -1)
+
 (print "set global key bindings")
 (global-set-key [134217840] (quote projectile-find-file-in-known-projects))
 
