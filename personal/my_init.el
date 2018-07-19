@@ -1,5 +1,23 @@
 ;; Enable / Configure parinfer
 (require 'use-package)
+
+(print "Install / Setup csharp-mode package")
+(add-to-list 'c-default-style '(csharp-mode . "c#"))
+
+(use-package csharp-mode
+  :ensure t
+  :mode "\\.cs$"
+  :config
+  (setq csharp-want-imenu nil))
+
+(defun my-csharp-mode-hook ()
+  ;; enable the stuff you want for C# here
+  (electric-pair-mode 1)       ;; Emacs 24
+  (electric-pair-local-mode 1)) ;; Emacs 25
+
+(add-hook 'csharp-mode-hook 'my-csharp-mode-hook)
+
+(print "Install / Setup parinfer")
 (use-package parinfer
   :ensure t
   :bind

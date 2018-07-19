@@ -6,6 +6,7 @@ savehist
 saveplace
 eshell
 # elpa
+elpa/archives
 el-get
 semanticdb
 url
