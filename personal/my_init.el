@@ -17,6 +17,9 @@
 
 (add-hook 'csharp-mode-hook 'my-csharp-mode-hook)
 
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.cshtml\\'" . web-mode))
+
 (print "Install / Setup parinfer")
 (use-package parinfer
   :ensure t
