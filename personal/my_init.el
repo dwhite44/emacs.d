@@ -72,7 +72,7 @@
 
 (print "set default font")
 (custom-set-faces
- '(default ((t (:height 150 :family "Menlo")))))
+ '(default ((t (:height 160 :family "Menlo")))))
 
 (print "Disable autosave and set backup files to single directory")
 (setq auto-save-default nil)
