@@ -1,5 +1,6 @@
 ;; Enable / Configure parinfer
-(require 'use-package)
+(eval-when-compile
+  (require 'use-package))
 
 (print "Install / Setup csharp-mode package")
 (add-to-list 'c-default-style '(csharp-mode . "c#"))
@@ -19,6 +20,11 @@
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.cshtml\\'" . web-mode))
+
+(print "Install / Setup Groovy Mode")
+(use-package groovy-mode
+  :ensure t
+  :mode "\\.groovy")
 
 (print "Install / Setup parinfer")
 (use-package parinfer
