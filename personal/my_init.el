@@ -1,4 +1,6 @@
-;; Enable / Configure parinfer
+(prelude-require-packages '(ng2-mode))
+(require 'ng2-mode)
+
 (eval-when-compile
   (require 'use-package))
 
