@@ -29,6 +29,10 @@ Disable `rainbow-delimiters-mode'.
 
 ;;;***
 
+;;;### (autoloads nil nil ("rainbow-delimiters-pkg.el") (0 0 0 0))
+
+;;;***
+
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t

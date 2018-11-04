@@ -23,6 +23,10 @@ defining them in this alist.")
 
 ;;;***
 
+;;;### (autoloads nil nil ("zenburn-theme-pkg.el") (0 0 0 0))
+
+;;;***
+
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
