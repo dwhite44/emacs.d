@@ -62,6 +62,9 @@
     (setq evil-shift-width 2))
 (add-hook 'clojure-mode-hook #'set-vim-shift-width)
 
+(print "Turn off cleaning up whitespace")
+(setq prelude-clean-whitespace-on-save nil)
+
 (print "Disable smartparens (doesn't work with parinfer)")
 (require 'smartparens-config)
 (defun parinfer-disable-smartparens ()
