@@ -4,6 +4,12 @@
 (eval-when-compile
   (require 'use-package))
 
+(print "Install direnv package")
+(use-package direnv
+  :ensure t
+  :config
+  (direnv-mode))
+
 (print "Install / Setup csharp-mode package")
 (add-to-list 'c-default-style '(csharp-mode . "c#"))
 
