@@ -95,6 +95,7 @@
 (setq auto-save-default nil)
 (setq prelude-auto-save nil)
 (setq backup-directory-alist '(("" . "~/.emacs.d/emacs-backup")))
+(super-save-stop)
 
 (print "Set evil mode to insert for some windows")
 (defun evil-set-insert ()
